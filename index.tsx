@@ -5,7 +5,7 @@ import * as NProgress from 'nprogress'
 
 type ProgressProps = {
   color?: string
-  startPosition?: number
+  startFrom?: number
   delay?: number
   height?: number
   showSpinner?: boolean
@@ -18,7 +18,7 @@ type ProgressProps = {
 
 const defaultConfig: Required<ProgressProps> = {
   color: '#3366FF',
-  startPosition: 0.2,
+  startFrom: 20,
   delay: 0,
   height: 2,
   showSpinner: true,
@@ -53,7 +53,7 @@ export default function Progress(props: ProgressProps) {
 
   React.useEffect(() => {
     NProgress.configure({
-      minimum: config.startPosition,
+      minimum: (config.startFrom / 100),
       showSpinner: config.showSpinner,
       easing: config.easing,
       speed: config.speed,
