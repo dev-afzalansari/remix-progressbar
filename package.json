@@ -2,7 +2,6 @@
   "name": "remix-progressbar",
   "version": "0.1.0",
   "description": "Progress Bar for Remix Applications",
-  "private": true,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
