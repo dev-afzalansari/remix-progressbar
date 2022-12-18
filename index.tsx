@@ -1,18 +1,18 @@
 import * as React from 'react'
-import { useTransition as useNavigation } from "@remix-run/react";
+import { useTransition as useNavigation } from '@remix-run/react'
 
-import * as NProgress from 'nprogress';
+import * as NProgress from 'nprogress'
 
 type ProgressProps = {
-    color?: string;
-    startPosition?: number;
-    stopDelayMs?: number;
-    height?: number;
-    showSpinner?: boolean;
-    easing?: string;
-    speed?: number;
-    trickle?: boolean;
-    trickleSpeed?: number
+  color?: string
+  startPosition?: number
+  stopDelayMs?: number
+  height?: number
+  showSpinner?: boolean
+  easing?: string
+  speed?: number
+  trickle?: boolean
+  trickleSpeed?: number
 }
 
 const defaultConfig: Required<ProgressProps> = {
@@ -20,41 +20,42 @@ const defaultConfig: Required<ProgressProps> = {
   startPosition: 0.2,
   stopDelayMs: 0,
   height: 2,
-  showSpinner: false,
-  easing: 'ease',
+  showSpinner: true,
+  easing: 'linear',
   speed: 200,
   trickle: true,
-  trickleSpeed: 800
+  trickleSpeed: 200
 }
 
 export default function Progress(props: ProgressProps) {
-    const navigation = useNavigation()
-    const config = React.useMemo(() => {
-      return {
-        ...defaultConfig,
-        ...props
-      }
-    }, [props])
+  const navigation = useNavigation()
+  const config = React.useMemo(() => {
+    return {
+      ...defaultConfig,
+      ...props
+    }
+  }, [props])
 
-    if(navigation.state === 'loading') NProgress.start()
+  if (navigation.state === 'loading') NProgress.start()
 
-    React.useEffect(() =>  {
-        if(navigation.state !== 'loading') NProgress.done()
-    }) 
+  React.useEffect(() => {
+    if (navigation.state !== 'loading') NProgress.done()
+  })
 
-    React.useEffect(() => {
-      NProgress.configure({
-        minimum: config.startPosition,
-        showSpinner: config.showSpinner,
-        easing: config.easing,
-        speed: config.speed,
-        trickle: config.trickle,
-        trickleSpeed: config.trickleSpeed
-      })
-    }, [])
+  React.useEffect(() => {
+    NProgress.configure({
+      minimum: config.startPosition,
+      showSpinner: config.showSpinner,
+      easing: config.easing,
+      speed: config.speed,
+      trickle: config.trickle,
+      trickleSpeed: config.trickleSpeed
+    })
+  }, [])
 
-    // https://unpkg.com/nprogress@0.2.0/nprogress.css
-    return <style>{`
+  // https://unpkg.com/nprogress@0.2.0/nprogress.css
+  return (
+    <style>{`
     #nprogress {
       pointer-events: none;
     }
@@ -126,4 +127,5 @@ export default function Progress(props: ProgressProps) {
       100% { transform: rotate(360deg); }
     }
     `}</style>
+  )
 }

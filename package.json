@@ -10,12 +10,19 @@
     "README.md",
     "/dist"
   ],
+  "scripts": {
+    "format": "prettier index.tsx --write",
+    "cleanup": "rimraf dist",
+    "build": "tsc"
+  },
   "devDependencies": {
     "@remix-run/react": "^1.9.0",
     "@types/nprogress": "^0.2.0",
     "@types/react": "^18.0.26",
+    "prettier": "^2.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rimraf": "^3.0.2",
     "typescript": "^4.9.4"
   },
   "dependencies": {
