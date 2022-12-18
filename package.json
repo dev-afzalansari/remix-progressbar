@@ -20,5 +20,18 @@
   },
   "dependencies": {
     "nprogress": "^0.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dev-afzalansari/remix-progressbar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dev-afzalansari/remix-progressbar/issues"
+  },
+  "keywords": [
+    "remix-progressbar",
+    "progressbar",
+    "nprogress"
+  ],
+  "license": "MIT"
 }
