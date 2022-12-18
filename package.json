@@ -1,0 +1,24 @@
+{
+  "name": "remix-progressbar",
+  "version": "0.0.0-dev",
+  "description": "Progress Bar for Remix Applications",
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "package.json",
+    "README.md",
+    "/dist"
+  ],
+  "devDependencies": {
+    "@remix-run/react": "^1.9.0",
+    "@types/nprogress": "^0.2.0",
+    "@types/react": "^18.0.26",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "nprogress": "^0.2.0"
+  }
+}
