@@ -53,7 +53,7 @@ export default function Progress(props: ProgressProps) {
 
   React.useEffect(() => {
     NProgress.configure({
-      minimum: (config.startFrom / 100),
+      minimum: config.startFrom / 100,
       showSpinner: config.showSpinner,
       easing: config.easing,
       speed: config.speed,

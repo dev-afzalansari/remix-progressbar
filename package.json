@@ -1,13 +1,13 @@
 {
   "name": "remix-progressbar",
-  "version": "0.0.1-dev",
+  "version": "0.1.0",
   "description": "Progress Bar for Remix Applications",
-  "private": true,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "package.json",
     "README.md",
+    "LICENSE",
     "/dist"
   ],
   "scripts": {
@@ -36,6 +36,7 @@
     "url": "https://github.com/dev-afzalansari/remix-progressbar/issues"
   },
   "keywords": [
+    "remix",
     "remix-progressbar",
     "progressbar",
     "nprogress"

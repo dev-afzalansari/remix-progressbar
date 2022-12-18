@@ -1,4 +1,5 @@
 {
     "sandboxes": ["remix-progresbar-eu964e"],
-    "node": "16"
+    "node": "16",
+    "silent": true
 }
