@@ -1,6 +1,11 @@
 # Remix-Progressbar
 
-Progress Bar for Remix Applications.
+**Progress Bar for Remix Applications**.
+
+<div>
+  <span><a href='https://npmjs.com/package/remix-progressbar'><img src='https://badgen.net/npm/v/remix-progressbar' /></a></span>
+  <span><a href='https://github.com/dev-afzalansari/remix-progressbar/blob/main/LICENSE'><img src='https://badgen.net/npm/license/remix-progressbar' /></a></span>
+</div>
 
 # Installation
 
